@@ -1,0 +1,41 @@
+name: ClickWarp
+main: clickwarp.ClickWarp
+version: 0.1.3
+commands:
+  clickwarp:
+    description: Use the plugin.
+    usage: /<command> <reload|unlink|listwarps|setwarp <name>|delwarp <name>|linkwarp <name>|goto <name>>
+    permission: clickwarp.use
+    permission-message: You don't have permission to use this plugin!
+permissions:
+  clickwarp.*:
+    description: Allows you to do anything with this plugin.
+    children:
+      clickwarp.use: true
+      clickwarp.select: true
+      clickwarp.reload: true
+      clickwarp.unlink: true
+      clickwarp.setwarp: true
+      clickwarp.link: true
+      clickwarp.goto: true
+  clickwarp.use:
+    description: Allows you to use the plugin.
+    default: true
+  clickwarp.select:
+    description: Allows you to select blocks.
+    default: op
+  clickwarp.reload:
+    description: Allows you to reload the configuration.
+    default: op
+  clickwarp.unlink:
+    description: Allows you to delete block portals.
+    default: op
+  clickwarp.setwarp:
+    description: Allows you to set and delete warps.
+    default: op
+  clickwarp.link:
+    description: Allows you to create portals.
+    default: op
+  clickwarp.goto:
+    description: Allows you to go to warps.
+    default: op
